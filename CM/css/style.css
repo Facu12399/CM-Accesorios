@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    color: black;
+    font-family: "Lustria", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*CONTENEDOR PADRE*/
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 40px 8fr 1fr;
+    gap: 1px;
+    background-color:white;
+}
+
+/*ENCABEZADO*/
+.encabezado{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 15px;
+}
+
+.encabezado img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(196, 1, 196); */
+    background-color: black;
+}
+
+.encabezado div h1{
+    color: gray;
+}
+
+/*MENU DE NAVEGACION*/
+
+.menu{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#hamburguesa{
+    display: none;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+}
+
+.menu ul li{
+    margin: 10px;
+    border-bottom: 1px gray;
+    color: gray;
+}
+
+.menu ul a li i{
+    color: gray;
+}
+
+.menu ul a{
+    text-decoration: none;
+}
+
+.menu ul li:hover{
+    border-bottom: 1px solid darkmagenta;
+    transition: 1.5s ease-in-out;
+}
+
+.menu i{
+    color: gray;
+}
+
+/*CONTENIDO*/
+
+.contenido{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr 200px;
+    gap: 1px;
+    background-color: white;
+}
+
+.title-seccion{
+    padding: 10px;
+    background-color: rgb(196, 1, 196);
+}
+
+.title-seccion h3{
+    font-style: oblique;
+    font-weight: 500;
+}
+
+.verso{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to right, darkmagenta, white);
+}
+
+.verso img{
+    width: 15em;
+    height: 15em;
+}
+
+.verso div{
+    margin: 20px;
+    width: 50%;
+}
+
+.verso .img-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.verso .info-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.verso .info-producto a{
+    text-decoration: none;
+}
+
+.verso .info-producto p, .verso .info-producto span{
+    font-style: italic;
+}
+
+.inverso{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to left, darkmagenta, white);
+}
+
+.inverso img{
+    width: 15em;
+    height: 15em;
+}
+
+.inverso div{
+    margin: 20px;
+    width: 50%;
+}
+
+.inverso .img-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inverso .info-producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.inverso .info-producto a{
+    font-weight: bold;
+    text-decoration: none;   
+}
+
+.inverso .info-producto p, .inverso .info-producto span{
+    font-style: italic;
+}
+
+.info-nosotros-father{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(darkmagenta, white);
+}
+
+.info-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*FOOTER*/
+
+.final{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.final img{
+    width: 14px;
+    height: 14px;
+}
+
+.final p{
+    margin: 5px;
+    color: gray;
+}
+
+.final p i{
+    color: darkmagenta;
+}
+
+@media only screen and (max-width:600px){
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 40px 8fr 1fr;
+        gap: 1px;
+        background-color:white;
+    }
+
+    /*MENU*/
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hamburguesa{
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .menu ul{
+        display: none;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    /* CONTENIDO */
+    .contenido{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1px;
+        background-color: white;
+    }
+
+    .info-nosotros-father{
+        display: none;
+    }
+
+    .info-nosotros{
+        display: none;
+    }
+}
